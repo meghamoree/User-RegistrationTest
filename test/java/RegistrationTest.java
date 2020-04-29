@@ -20,7 +20,6 @@ import org.junit.Test;
         @Test
         public void givenlastName_whenValid_thenTrue() {
             boolean lastname = registration.checkLastName("More");
-
             Assert.assertTrue(lastname);
         }
 
@@ -30,6 +29,15 @@ import org.junit.Test;
             Assert.assertFalse(lastname);
         }
 
-
+        @Test
+        public void givenEmail_whenValid_thenTrue() {
+            boolean result = registration.checkEmail("meghamoree@gmail.com");
+            Assert.assertTrue(result);
+        }
+        @Test
+        public void givenEmail_whenValid_thenFalse() {
+            boolean result = registration.checkEmail("$123@gmail.com");
+            Assert.assertFalse(result);
+        }
 
     }
