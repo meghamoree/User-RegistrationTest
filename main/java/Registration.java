@@ -17,6 +17,7 @@ import java.util.regex.Pattern;
         public boolean checkEmail(String email) {
             return Pattern.matches(emailPattern, email);
         }
+        
         public boolean checkMobileNumber(String mobileNumber) {
             return Pattern.matches(mobilePattern,mobileNumber);
         }
