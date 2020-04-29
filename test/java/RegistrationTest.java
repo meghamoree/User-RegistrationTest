@@ -35,9 +35,18 @@ import org.junit.Test;
             Assert.assertTrue(result);
         }
         @Test
-        public void givenEmail_whenValid_thenFalse() {
+        public void givenEmail_wheninValid_thenFalse() {
             boolean result = registration.checkEmail("$123@gmail.com");
             Assert.assertFalse(result);
         }
-
+        @Test
+        public void givenMobileNumber_whenValid_thenTrue() {
+            boolean result=registration.checkMobileNumber("91 9340747351");
+            Assert.assertTrue(result);
+        }
+        @Test
+        public void givenMobileNumber_whenNotValid_thenFalse() {
+            boolean result=registration.checkMobileNumber("988888855");
+            Assert.assertFalse(result);
+        }
     }
