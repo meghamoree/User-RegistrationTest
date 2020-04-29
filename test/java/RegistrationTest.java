@@ -10,13 +10,11 @@ import org.junit.Test;
             boolean result = registration.checkFirstName("Megha");
             Assert.assertTrue(result);
         }
-
         @Test
         public void givenfirstName_whenInValid_thenFalse() {
             boolean result = registration.checkFirstName("Me");
             Assert.assertFalse(result);
         }
-
         @Test
         public void givenlastName_whenValid_thenTrue() {
             boolean lastname = registration.checkLastName("More");
@@ -51,4 +49,16 @@ import org.junit.Test;
             boolean result=registration.checkMobileNumber("988888855");
             Assert.assertFalse(result);
         }
+        @Test
+        public void givenPassword_whenValid_thenTrue(){
+            boolean result=registration.checkPassword("Meghamore");
+            Assert.assertTrue(result);
+        }
+
+        @Test
+        public void givenPassword_whenInvalid_thenFalse() {
+            boolean result=registration.checkPassword("Megha");
+            Assert.assertFalse(result);
+        }
+
     }
