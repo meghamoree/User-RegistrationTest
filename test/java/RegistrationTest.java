@@ -39,11 +39,13 @@ import org.junit.Test;
             boolean result = registration.checkEmail("$123@gmail.com");
             Assert.assertFalse(result);
         }
+
         @Test
         public void givenMobileNumber_whenValid_thenTrue() {
             boolean result=registration.checkMobileNumber("91 9340747351");
             Assert.assertTrue(result);
         }
+
         @Test
         public void givenMobileNumber_whenNotValid_thenFalse() {
             boolean result=registration.checkMobileNumber("988888855");
