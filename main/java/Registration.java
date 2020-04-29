@@ -10,7 +10,6 @@ import java.util.regex.Pattern;
         public boolean checkFirstName(String FirstName) {
             return Pattern.matches(FirstNamePattern, FirstName);
         }
-
         public boolean checkLastName(String LastName) {
             return Pattern.matches(LastNamePattern, LastName);
         }
