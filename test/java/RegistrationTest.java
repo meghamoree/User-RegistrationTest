@@ -51,13 +51,13 @@ import org.junit.Test;
         }
         @Test
         public void givenPassword_whenValid_thenTrue(){
-            boolean result=registration.checkPassword("Meghamore123");
+            boolean result=registration.checkPassword("Megha@123");
             Assert.assertTrue(result);
         }
 
         @Test
         public void givenPassword_whenInvalid_thenFalse() {
-            boolean result=registration.checkPassword("megha");
+            boolean result=registration.checkPassword("Megha@#1");
             Assert.assertFalse(result);
         }
 
